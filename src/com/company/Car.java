@@ -7,6 +7,7 @@ public class Car {
     private NumberOfDoors numberOfDoors;
     private Name name;
     private boolean theLamp;
+    public final int KM = 100;
 
     public Car(Name name, String color, int year, NumberOfDoors numberOfDoors) {
         this.color = color;
@@ -49,9 +50,25 @@ public class Car {
 
     }
 
+    public void fuelConsumption(double fuel, double coveredDistance) {
+        double fuelConsumption = fuel / coveredDistance * KM;
+        System.out.println("Fuel consumption = " + fuelConsumption + " l/fuel for 100 km");
+    }
+
+    public void fuelConsumption(double KM, double fuel, double coveredDistance){
+        double fuelConsumption = fuel / coveredDistance * KM;
+        System.out.println("Fuel consumption = " + fuelConsumption + " l/fuel for 100 km");
+    }
+
+    public void fuelConsumption(int KM, double fuel, double coveredDistance){
+        double fuelConsumption = fuel/coveredDistance * KM;
+        System.out.println("Fuel consumption = " + fuelConsumption + " l/fuel for 100 km");
+    }
+
 
     public void getInfo() {
-        System.out.println("Name = " + getName() + "\nColor = " + color + "\nYear = " + year + "\nNumber of doors = " + numberOfDoors.getNumberOfDoors());
+        System.out.println("Name = " + getName() + "\nColor = " + color + "\nYear = " + year + "\nNumber of doors = "
+                + numberOfDoors.getNumberOfDoors());
     }
 
 

@@ -2,8 +2,15 @@ package com.company;
 
 public final class AudiTT extends Audi{
 
-    public AudiTT(Name name, String color, int year, NumberOfDoors numberOfDoors) {
-        super(name,color, year, numberOfDoors);
+    private double engineCapacity;
+
+    public AudiTT(Name name, String color, int year, NumberOfDoors numberOfDoors, String whichCountryfrom, double engineCapacity) {
+        super(name,color, year, numberOfDoors, whichCountryfrom);
+        this.engineCapacity = engineCapacity;
+    }
+
+    public double getEngineCapacity(){
+        return engineCapacity;
     }
 
     @Override
@@ -11,6 +18,9 @@ public final class AudiTT extends Audi{
         System.out.println("paap-paap");
     }
 
-
-
+    @Override
+    public void getInfo() {
+        super.getInfo();
+        System.out.println("Engine capasity is: " + engineCapacity);
+    }
 }

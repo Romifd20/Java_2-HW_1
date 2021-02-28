@@ -2,7 +2,7 @@ package com.company;
 
 public class NumberOfDoors {
 
-    private int numberOfDoors = 4;
+    private int numberOfDoors;
 
 
     public NumberOfDoors(int numberOfDoors) {
